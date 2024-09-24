@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Test_TBL01</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Test_TBL01</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">3335bf08e412021008dda4ccc4008005</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-29 07:27:47</sys_created_on>
+        <sys_id>a3e0aaf747a30210acd2a22f316d4393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test_TBL01</sys_name>
+        <sys_package display_value="TestApp" source="x_1464770_testapp">490fcc0747630210acd2a22f316d43d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TestApp">490fcc0747630210acd2a22f316d43d7</sys_scope>
+        <sys_update_name>sys_wizard_answer_a3e0aaf747a30210acd2a22f316d4393</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-29 07:27:47</sys_updated_on>
+        <table/>
+        <target_url>x_1464770_testapp_test_tbl01.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

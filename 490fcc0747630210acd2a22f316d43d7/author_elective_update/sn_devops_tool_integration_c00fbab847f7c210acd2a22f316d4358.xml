@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_devops_tool_integration">
+    <sn_devops_tool_integration action="DELETE">
+        <active>true</active>
+        <api_manager/>
+        <bulk_processing_capability/>
+        <integration_handler_name/>
+        <integration_version>5.1</integration_version>
+        <seeded>false</seeded>
+        <sys_class_name>sn_devops_tool_integration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-01 12:13:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c00fbab847f7c210acd2a22f316d4358</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AzureDevOpsDemo</sys_name>
+        <sys_package display_value="TestApp" source="x_1464770_testapp">490fcc0747630210acd2a22f316d43d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="TestApp">490fcc0747630210acd2a22f316d43d7</sys_scope>
+        <sys_update_name>sn_devops_tool_integration_c00fbab847f7c210acd2a22f316d4358</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-01 12:13:19</sys_updated_on>
+        <tool>sn_devops_tool</tool>
+        <tool_label>AzureDevOpsDemo</tool_label>
+        <tool_logo/>
+        <tool_name>x_1464770_testapp_AzureDevOpsDemo</tool_name>
+        <use_packageable_integrations>true</use_packageable_integrations>
+    </sn_devops_tool_integration>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="TestApp">490fcc0747630210acd2a22f316d43d7</application>
+        <file_path/>
+        <instance_id>136bae19db26b9d8caf99027c5961979</instance_id>
+        <instance_name>dev212832</instance_name>
+        <name>sn_devops_tool_integration_c00fbab847f7c210acd2a22f316d4358</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_devops_tool_integration"><sn_devops_tool_integration action="INSERT_OR_UPDATE"><active>true</active><api_manager/><bulk_processing_capability/><integration_handler_name/><integration_version>5.1</integration_version><seeded>false</seeded><sys_class_name>sn_devops_tool_integration</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-08-01 12:13:19</sys_created_on><sys_domain>global</sys_domain><sys_id>c00fbab847f7c210acd2a22f316d4358</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AzureDevOpsDemo</sys_name><sys_package display_value="TestApp" source="x_1464770_testapp">490fcc0747630210acd2a22f316d43d7</sys_package><sys_policy/><sys_scope display_value="TestApp">490fcc0747630210acd2a22f316d43d7</sys_scope><sys_update_name>sn_devops_tool_integration_c00fbab847f7c210acd2a22f316d4358</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-08-01 12:13:19</sys_updated_on><tool>sn_devops_tool</tool><tool_label>AzureDevOpsDemo</tool_label><tool_logo/><tool_name>x_1464770_testapp_AzureDevOpsDemo</tool_name><use_packageable_integrations>true</use_packageable_integrations></sn_devops_tool_integration></record_update>]]></payload>
+        <payload_hash>461914584</payload_hash>
+        <record_name>AzureDevOpsDemo</record_name>
+        <reverted_from/>
+        <source>1c24223f47a30210acd2a22f316d4321</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-01 12:13:19</sys_created_on>
+        <sys_id>2f0fbe7c47f7c210acd2a22f316d43bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1910ddbe0330000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-01 12:13:19</sys_updated_on>
+        <type>DevOps Tool Integration</type>
+        <update_guid>230fbe7c58f7c2109bdaf60afd82d2bd</update_guid>
+        <update_guid_history>230fbe7c58f7c2109bdaf60afd82d2bd:461914584</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AzureDevOpsDemo">df3ff6b847f7c210acd2a22f316d4387</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-01 12:14:07</sys_created_on>
+        <sys_db_object display_value="" name="sn_devops_tool_integration">sn_devops_tool_integration</sys_db_object>
+        <sys_id>8605c74ca50c49d7b436e54a3a66e3f1</sys_id>
+        <sys_metadata>c00fbab847f7c210acd2a22f316d4358</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AzureDevOpsDemo</sys_name>
+        <sys_package display_value="TestApp" source="x_1464770_testapp">490fcc0747630210acd2a22f316d43d7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="TestApp">490fcc0747630210acd2a22f316d43d7</sys_scope>
+        <sys_scope_delete display_value="">10906ca1697640d6bf5a782e1f41b451</sys_scope_delete>
+        <sys_update_name>sn_devops_tool_integration_c00fbab847f7c210acd2a22f316d4358</sys_update_name>
+        <sys_update_version display_value="sn_devops_tool_integration_c00fbab847f7c210acd2a22f316d4358">2f0fbe7c47f7c210acd2a22f316d43bd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-01 12:14:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
