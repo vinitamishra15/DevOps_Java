@@ -6,15 +6,14 @@ jobs:
   pool: Default
 
   steps:
-  - script: |
-      echo "Checking for available web browsers..."
+  - powershell: |
+      Write-Host "Checking for available web browsers..."
 
       # Windows browsers
-      browsers=()
-      if (Get-Command chrome -ErrorAction SilentlyContinue) { browsers+=("Google Chrome") }
-      if (Get-Command msedge -ErrorAction SilentlyContinue) { browsers+=("Microsoft Edge") }
-      if (Get-Command firefox -ErrorAction SilentlyContinue) { browsers+=("Mozilla Firefox") }
-      if (Get-Command safari -ErrorAction SilentlyContinue) { browsers+=("Apple Safari (if installed)") }
+      $browsers = @()
+      if (Get-Command chrome -ErrorAction SilentlyContinue) { $browsers += "Google Chrome" }
+      if (Get-Command msedge -ErrorAction SilentlyContinue) { $browsers += "Microsoft Edge" }
+      if (Get-Command firefox -ErrorAction SilentlyContinue) { $browsers += "Mozilla Firefox" }
 
       if ($browsers.Count -eq 0) {
           Write-Host "No web browsers found."
@@ -22,8 +21,7 @@ jobs:
       } else {
           Write-Host "Available web browsers: $($browsers -join ', ')"
       }
-    displayName: 'Check available web browsers'
-    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+    displayName: 'Check available web browsers (Windows)'
 
   - script: |
       echo "Checking for available web browsers..."
@@ -40,7 +38,4 @@ jobs:
           echo "No web browsers found."
           exit 1
       else
-          echo "Available web browsers: ${browsers[*]}"
-      fi
-    displayName: 'Check available web browsers'
-    condition: eq( variables['Agent.OS'], 'Linux' )
+       
