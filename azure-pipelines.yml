@@ -3,18 +3,27 @@ trigger:
 
 jobs:
 - job: CheckBrowsers
-  pool:
-    vmImage: 'windows-latest'  # Change to 'ubuntu-latest' for Linux agents
+  pool: Default
 
   steps:
   - powershell: |
       Write-Host "Checking for available web browsers..."
 
-      # Windows browsers
+      # Initialize an array to hold the names of found browsers
       $browsers = @()
-      $browsers += if (Get-Command "chrome" -ErrorAction SilentlyContinue) { "Google Chrome" }
-      $browsers += if (Get-Command "msedge" -ErrorAction SilentlyContinue) { "Microsoft Edge" }
-      $browsers += if (Get-Command "firefox" -ErrorAction SilentlyContinue) { "Mozilla Firefox" }
+
+      # Check for common browser executables
+      $browserPaths = @(
+          "C:\Program Files\Google\Chrome\Application\chrome.exe",
+          "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+          "C:\Program Files\Mozilla Firefox\firefox.exe"
+      )
+
+      foreach ($path in $browserPaths) {
+          if (Test-Path $path) {
+              $browsers += [System.IO.Path]::GetFileNameWithoutExtension($path)
+          }
+      }
 
       if ($browsers.Count -eq 0) {
           Write-Host "No web browsers found."
@@ -22,24 +31,4 @@ jobs:
       } else {
           Write-Host "Available web browsers: $($browsers -join ', ')"
       }
-    displayName: 'Check available web browsers (Windows)'
-
-  - script: |
-      echo "Checking for available web browsers..."
-
-      # Linux browsers
-      browsers=()
-      if command -v google-chrome >/dev/null; then browsers+=("Google Chrome"); fi
-      if command -v chromium-browser >/dev/null; then browsers+=("Chromium"); fi
-      if command -v firefox >/dev/null; then browsers+=("Mozilla Firefox"); fi
-      if command -v brave-browser >/dev/null; then browsers+=("Brave"); fi
-      if command -v opera >/dev/null; then browsers+=("Opera"); fi
-
-      if [ ${#browsers[@]} -eq 0 ]; then
-          echo "No web browsers found."
-          exit 1
-      else
-          echo "Available web browsers: ${browsers[*]}"
-      fi
-    displayName: 'Check available web browsers (Linux)'
-    condition: eq( variables['Agent.OS'], 'Linux' )
+    displayName: 'Check available web browsers (Windows 11)'
