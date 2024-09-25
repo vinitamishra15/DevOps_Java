@@ -11,9 +11,9 @@ jobs:
 
       # Windows browsers
       $browsers = @()
-      if (Get-Command chrome -ErrorAction SilentlyContinue) { $browsers += "Google Chrome" }
-      if (Get-Command msedge -ErrorAction SilentlyContinue) { $browsers += "Microsoft Edge" }
-      if (Get-Command firefox -ErrorAction SilentlyContinue) { $browsers += "Mozilla Firefox" }
+      $browsers += if (Get-Command "chrome" -ErrorAction SilentlyContinue) { "Google Chrome" }
+      $browsers += if (Get-Command "msedge" -ErrorAction SilentlyContinue) { "Microsoft Edge" }
+      $browsers += if (Get-Command "firefox" -ErrorAction SilentlyContinue) { "Mozilla Firefox" }
 
       if ($browsers.Count -eq 0) {
           Write-Host "No web browsers found."
@@ -38,4 +38,7 @@ jobs:
           echo "No web browsers found."
           exit 1
       else
-       
+          echo "Available web browsers: ${browsers[*]}"
+      fi
+    displayName: 'Check available web browsers (Linux)'
+    condition: eq( variables['Agent.OS'], 'Linux' )
